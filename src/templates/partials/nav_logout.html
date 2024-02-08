@@ -1,3 +1,24 @@
-{% extends"base.html" %}
-{% block body %}
-{% endblock %}
+{% load static %}
+<section class="NavLogOut font-semibold	text-lg w-full h-24">
+    <nav class="bg-white-900 w-full h-full px-6 flex justify-around items-center ">
+        <!-- Logo -->
+        <a href="#" class="mr-auto flex items-center">
+            <img src="{% static 'images/Logo SoTrip.svg' %}" alt="Logo SoTrip" class="h-auto w-24">
+        </a>
+        <!-- Boutons -->
+        <div class="hidden mdc:flex items-center justify-end space-x-4 w-5/6 h-full">
+            <div class="flex items-center">
+                <img src="{% static 'images/moteur-de-recherche.png' %}" alt="Search Icon" class="size-10">
+                <a href="#" class="btn btn-primary LinkNavLogOut">Rechercher</a>
+            </div>
+            <div class="flex items-center">
+                <img src="{% static 'images/plus.png' %}" alt="Logo SoTrip" class="size-10">
+                <a href="#" class="btn btn-primary LinkNavLogOut">Publier un trajet</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="BtnNavLogOut hidden md:block"><a href="#">Se connecter</a></button>
+                <button class="BtnNavLogOut hidden md:block"><a href="#">S'inscrire</a></button>
+            </div>
+        </div>
+    </nav>
+</section>

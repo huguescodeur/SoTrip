@@ -5,12 +5,20 @@
 <head>
     <meta charset="UTF-8">
     <title>SoTrip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% tailwind_css %}
 </head>
-<body>
-    {% block body %}
-    {% endblock %}
-    <h1 class="text-3xl font-bold text-yellow-400"> Hello !</h1>
+<body class="font-[Montserrat]">
+    <!-- Inclure la barre de navigation -->
+    {% include 'partials/nav_logout.html' %}
+
+    <!-- Contenu spécifique à chaque page -->
+    <div class="container mx-auto py-8">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    {% include 'partials/footer.html' %}
 </body>
 </html>
