@@ -1,12 +1,11 @@
-{% load static %}
-<section class="NavLogOut font-semibold	text-lg w-full h-24">
+<section class="NavLogOut font-semibold text-lg w-full h-24">
     <nav class="bg-white-900 w-full h-full px-6 flex justify-around items-center ">
         <!-- Logo -->
         <a href="#" class="mr-auto flex items-center">
             <img src="{% static 'images/Logo SoTrip.svg' %}" alt="Logo SoTrip" class="h-auto w-24">
         </a>
         <!-- Boutons -->
-        <div class="hidden mdc:flex items-center justify-end space-x-4 w-5/6 h-full">
+        <div class="hidden md:flex items-center justify-end space-x-4 w-5/6 h-full">
             <div class="flex items-center">
                 <img src="{% static 'images/moteur-de-recherche.png' %}" alt="Search Icon" class="size-10">
                 <a href="#" class="btn btn-primary LinkNavLogOut">Rechercher</a>
@@ -21,36 +20,28 @@
             </div>
         </div>
         <!-- Dropdown Menu -->
-        <div class="mdc:hidden hidden-menu">
-            <div class="menu-dropdown1 relative ">
+        <div class="md:hidden">
+            <div class="menu-dropdown1 relative">
                 <button id="hs-dropdown-custom-trigger1" type="button" class="">
                     <!-- Add your trigger icon here -->
-                    <img src="{% static 'images/menu.png' %}" alt="menu icon" class="size-6">
+                    <img src="{% static 'images/menu.png' %}" alt="Logo SoTrip" class="size-6">
                 </button>
                 <div class="absolute transition-opacity duration-200 origin-top-right top-10 right-0 w-48 py-2 bg-white shadow-md rounded-lg">
                     <!-- Dropdown items -->
-                    <div class="flex items-center px-4 py-2">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">Newsletter</a>
+                    <div class="flex items-center">
                         <img src="{% static 'images/moteur-de-recherche.png' %}" alt="Search Icon" class="size-10">
-                        <a href="#" class="btn btn-primary text-sm hover:text-sm LinkNavLogOut">Rechercher</a>
+                        <a href="#" class="btn btn-primary LinkNavLogOut">Rechercher</a>
                     </div>
-                    <div class="flex items-center px-4 py-2">
-                        <img src="{% static 'images/plus.png' %}" alt="New Trip icon" class="size-10">
-                        <a href="#" class="btn btn-primary text-sm hover:text-sm LinkNavLogOut">Publier un trajet</a>
+                    <div class="flex items-center">
+                        <img src="{% static 'images/plus.png' %}" alt="Logo SoTrip" class="size-10">
+                        <a href="#" class="btn btn-primary LinkNavLogOut">Publier un trajet</a>
                     </div>
-                    <button class="BtnNavLogOut w-full mb-2 text-sm"><a href="#">Se connecter</a></button>
-                    <button class="BtnNavLogOut w-full text-sm"><a href="#">S'inscrire</a></button>
+                    <button class="BtnNavLogOut block"><a href="#">Se connecter</a></button>
+                    <button class="BtnNavLogOut block"><a href="#">S'inscrire</a></button>
                 </div>
             </div>
         </div>
     </nav>
 </section>
-
-<script>
-document.getElementById('hs-dropdown-custom-trigger1').addEventListener('click', function () {
-    var dropdownMenu = document.querySelector('.mdc:hidden');
-    dropdownMenu.classList.toggle('hidden-menu');
-    dropdownMenu.classList.toggle('opacity-0');
-    this.querySelector('svg').classList.toggle('rotate-180');
-});
-</script>
 
