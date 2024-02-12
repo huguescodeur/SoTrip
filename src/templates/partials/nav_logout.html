@@ -21,7 +21,7 @@
             </div>
         </div>
         <!-- Dropdown Menu -->
-        <div class="mdc:hidden hidden-menu">
+        <div class="mdc:hidden">
             <div class="menu-dropdown1 relative ">
                 <button id="hs-dropdown-custom-trigger1" type="button" class="">
                     <!-- Add your trigger icon here -->
@@ -47,8 +47,8 @@
 
 <script>
 document.getElementById('hs-dropdown-custom-trigger1').addEventListener('click', function () {
-    var dropdownMenu = document.querySelector('.mdc:hidden');
-    dropdownMenu.classList.toggle('hidden-menu');
+    var dropdownMenu = this.nextElementSibling;
+    dropdownMenu.classList.toggle('hidden');
     dropdownMenu.classList.toggle('opacity-0');
     this.querySelector('svg').classList.toggle('rotate-180');
 });
