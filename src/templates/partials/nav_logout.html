@@ -27,7 +27,8 @@
                     <!-- Add your trigger icon here -->
                     <img src="{% static 'images/menu.png' %}" alt="menu icon" class="size-6">
                 </button>
-                <div class="absolute transition-opacity duration-200 origin-top-right top-10 right-0 w-48 py-2 bg-white shadow-md rounded-lg">
+                <div id="sous-menu"
+                    class="hidden absolute transition-opacity duration-200 origin-top-right top-10 right-0 w-48 py-2 bg-white shadow-md rounded-lg">
                     <!-- Dropdown items -->
                     <div class="flex items-center px-4 py-2">
                         <img src="{% static 'images/moteur-de-recherche.png' %}" alt="Search Icon" class="size-10">
@@ -35,7 +36,8 @@
                     </div>
                     <div class="flex items-center px-4 py-2">
                         <img src="{% static 'images/plus.png' %}" alt="New Trip icon" class="size-10">
-                        <a href="#" class="btn btn-primary text-sm hover:text-sm LinkNavLogOut">Publier un trajet</a>
+                        <a href="#" class="btn btn-primary text-sm hover:text-sm LinkNavLogOut">Publier un
+                            trajet</a>
                     </div>
                     <button class="BtnNavLogOut w-full mb-2 text-sm"><a href="#">Se connecter</a></button>
                     <button class="BtnNavLogOut w-full text-sm"><a href="#">S'inscrire</a></button>
@@ -46,11 +48,12 @@
 </section>
 
 <script>
-document.getElementById('hs-dropdown-custom-trigger1').addEventListener('click', function () {
-    var dropdownMenu = this.nextElementSibling;
-    dropdownMenu.classList.toggle('hidden');
-    dropdownMenu.classList.toggle('opacity-0');
-    this.querySelector('svg').classList.toggle('rotate-180');
-});
+    let button = document.getElementById('hs-dropdown-custom-trigger1');
+    let sousMenu = document.getElementById('sous-menu');
+    console.log(sousMenu)
+    button.addEventListener('click', function () {
+        //alert("Please")
+        sousMenu.classList.toggle('hidden');
+        this.querySelector('img').classList.toggle('rotate-180');
+    });
 </script>
-
