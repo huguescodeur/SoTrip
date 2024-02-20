@@ -32,6 +32,29 @@
     padding: 10px 20px;
     border-radius: 5px;
 }
+
+.BtnNavLogOutMin
+{
+    background-color: #4B77BB;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: 0.2s ease;
+}
+
+.BtnNavLogOutMin:hover,
+.BtnNavLogOutMin:focus
+{
+    background-color: #5ed1ff;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 .LinkNavLogOut
 {
     transition: 0.2s ease;  
